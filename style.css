@@ -1,0 +1,222 @@
+/* setting variables for the page */
+:root {
+	--main-bg-color: #F1F5F9;
+	--div-bg-color: #E2E8F0;
+	--grey-palete-gray-300: #CBD5E1;
+}
+
+/* hidden elements */
+.cont-1 li:nth-child(n + 3) {
+	visibility: hidden;
+}
+
+.cont-3 li:nth-child(n + 2) {
+	visibility: hidden;
+}
+
+.cont-3 p:nth-child(3) {
+	visibility: hidden;
+}
+
+.cont-3 ul > li::after {
+	visibility: hidden;
+}
+
+/* main styles */
+body {
+	font-family: Geneva, Verdana, sans-serif;
+    background-color: var(--main-bg-color);
+}
+
+
+
+/* flex container*/
+section {
+	display: flex;
+	margin-top: 3em;
+
+	/*##### for desktop #####*/
+	/* flex-direction: row; */
+	/* justify-content: center; */
+
+	/*##### for mobile #####*/
+	flex-direction: column;
+	align-items: center;
+}
+
+/* media queries */
+/* @media (orientation: landscape) {
+	section {
+		flex-direction: row;
+	}
+}
+
+@media (orientation: portrait) {
+	section {
+		flex-direction: column;
+	}
+} */
+
+/* flex items --> 3 divs */
+section > * {
+	min-width: 340px;
+    max-width: 340px;
+	padding: 2em;
+	padding-bottom: 0;
+	margin: 1em;
+	border-radius: 0.5em;
+	border: 1px solid lightgrey;
+	z-index: 10;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 25%);
+	background-color: var(--div-bg-color);
+}
+
+/* links */
+a {
+	display: block;
+	position: relative;
+	border: 1px solid black;
+	border-radius: 0.2em;
+	padding: 1em;
+	padding-left: 5.5em;
+	padding-right: 5.5em;
+	margin-bottom: 2em;
+	margin-top: 1em;
+	text-align: center;
+	text-decoration: none;
+}
+
+
+
+/* list elements styling block*/
+ul {
+	border-top: 1px solid lightgrey;
+	padding: 1em;
+	padding-left: 0;
+	padding-right: 0;
+	margin-bottom: 0;
+	list-style: none;
+}
+
+li::after {
+	content: "i";
+	line-height: 1.1em;
+	width: 1em;
+	height: 1em;
+	font-size: x-small;
+    text-align: center;
+	float: right;
+	border: 1px solid black;
+	border-radius: 1em;
+	padding: 2px;
+}
+
+li::before {
+	content: "\2713\0020";
+	color: #1B873F;
+}
+
+ul li {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	text-align: left;
+	
+}
+
+ul li span {
+	font-weight: 100;
+	letter-spacing: 1.40px;
+	font-family: Titillim Web, sans-serif;
+	font-size: 16px;
+}
+
+
+/* positioning header elements of flex items */
+.cont-head {
+    height: 3em;
+	margin: 1em 0 0 0;
+}
+
+div > p:nth-child(-n + 2) {
+	/* display: block; */
+    position: relative;
+	top: -5em;
+	color: #996DFF;
+}
+
+h2, .price {
+	display: inline-block;
+	margin-bottom: 0;
+}
+
+p.price {
+    position: relative;
+    left: 13.8em;
+	bottom: 5.8em;
+}
+
+div p > span {
+	font-weight: bold;
+}
+
+
+/* positioning and styling individual parts of flex items*/
+.cont-1:hover, .cont-3:hover {
+	border: 1px solid #996DFF;
+}
+
+.cont-1 a:hover, .cont-1 a:active, .cont-3 a:hover, .cont-3 a:active {
+	background: #1E293B;
+	color: var(--main-bg-color);
+}
+
+.cont-3 ul > li{
+	display: block;
+	text-indent: -17px;
+	margin-left: 25px;
+}
+
+.cont-3 ul > li::before {
+	content: "\2713\0020";
+	color: #1B873F;
+	position: relative;
+	top: 10px;
+	right: 3px;
+}
+
+.cont-2 {
+	background: #1E293B;
+	color: var(--main-bg-color);
+	padding-top: 0.7em;
+}
+
+.cont-2::before {
+	content: "mais vantajoso";
+	background-color: #FBA94C;
+	border-radius: 0.4em;
+	font-size: smaller;
+	padding: 0.5em 1.2em 0.5em 1.2em;
+	position: relative;
+	top: -1.7em;
+	left: 8em;
+}
+
+.cont-2 ul {
+	color: #94A3B8;;
+}
+
+.cont-2 li::after {
+	border: 1px solid var(--main-bg-color);
+	color: var(--grey-palete-gray-300);
+}
+
+.cont-2 a {
+	background: #996DFF;
+	border: 1px solid #996DFF;
+	color: var(--main-bg-color);
+}
+
+.cont-2 a:hover, .cont-2 a:active {
+	background: #7C3AED;
+	color: var(--main-bg-color);
+}
